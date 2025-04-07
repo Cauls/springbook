@@ -1,1 +1,3 @@
-# springbook
+EN - Springbook is an open-source proyect based on Java and Sprigboot designed to make data base insertions into an sqlite database. The proyect is library-themed, thats why springbook
+
+ES- Springbook es un proyecto open-source basado en Java haciendo uso de Springboot diseñado para hacer inserciones de sql en una base de datos sqlite. El proyecto está tematizado para una biblioteca, de ahí el nombre.
