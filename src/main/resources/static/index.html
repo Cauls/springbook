@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpringBook</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <!-- Header -->
+            <div class="header">
+                <h1>SpringBook</h1>
+            </div>
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="button-group">
+                    <button class="btn-primary">
+                        Nuevo registro
+                    </button>
+                    <button class="btn-danger">
+                        Eliminar seleccionados
+                    </button>
+                </div>
+                <div class="selection-count">2 row(s) selected</div>
+            </div>
+
+            <!-- Create Form -->
+            <div class="create-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" class="input">
+                    <input type="email" placeholder="Email" class="input">
+                    <button class="btn-success">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5"/>
+                        </svg>
+                        Save
+                    </button>
+                    <button class="btn-secondary">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12"/>
+                        </svg>
+                        Cancel
+                    </button>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="checkbox-column">
+                                <input type="checkbox" class="checkbox" checked>
+                            </th>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="checkbox" checked>
+                            </td>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="checkbox" checked>
+                            </td>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>jane@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" class="checkbox">
+                            </td>
+                            <td>3</td>
+                            <td>Bob Johnson</td>
+                            <td>bob@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
