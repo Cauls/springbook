@@ -20,7 +20,7 @@ public class SpringbookApplication {
 
 	@GetMapping("/")
 	public String home() {
-        return "index";
+        return "libros";
 	}
 
 	@Autowired
@@ -28,7 +28,6 @@ public class SpringbookApplication {
 
 	@Autowired
 	private ClientesRepository clientesRepository;
-
 	@Autowired
 	private LibrosRepository librosRepository;
 
@@ -36,7 +35,7 @@ public class SpringbookApplication {
 	CommandLineRunner innit(){
 		return args -> {
 			librosRepository.findAll().forEach(libro -> {
-				log.info(libro.getTitulo());
+				log.info(libro.toString());
 			});
 		};
 	}

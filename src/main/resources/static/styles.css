@@ -57,15 +57,12 @@ body {
 }
 
 /* Form */
-.create-form {
-    padding: 1rem;
-    border-bottom: 1px solid black;
-}
-
 .form-group {
     display: flex;
     gap: 1rem;
     align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid black;
 }
 
 .form-group input {
