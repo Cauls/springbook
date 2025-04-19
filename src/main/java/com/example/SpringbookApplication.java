@@ -22,21 +22,5 @@ public class SpringbookApplication {
 	public String home() {
         return "libros";
 	}
-
-	@Autowired
-	private AutoresRepository autoresRepository;
-
-	@Autowired
-	private ClientesRepository clientesRepository;
-	@Autowired
-	private LibrosRepository librosRepository;
-
-	@Bean
-	CommandLineRunner innit(){
-		return args -> {
-			librosRepository.findAll().forEach(libro -> {
-				log.info(libro.toString());
-			});
-		};
-	}
+	
 }
