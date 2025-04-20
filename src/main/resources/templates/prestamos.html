@@ -15,37 +15,29 @@
         </div>
 
         <!-- Toolbar -->
-        <div class="toolbar">
-            <div class="button-group">
-                <button class="btn-primary">
-                    Nuevo registro
-                </button>
-                <button class="btn-danger">
-                    <a> Eliminar seleccionados</a>
-                </button>
+        <form th:action="@{/prestamos/eliminar}" method="post">
+            <div>
+                <div class="form-group">
+                    <button class="btn-danger">
+                        <a> Eliminar por id</a>
+                    </button>
+                    <input type="text" name="idPrestamo" class="inputdel" placeholder="Id" required>
+                </div>
             </div>
-            <div class="selection-count">2 row(s) selected</div>
-        </div>
+        </form>
 
         <!-- Create Form -->
-        <div class="create-form">
+        <form th:action="@{/prestamos}" method="post">
             <div class="form-group">
-                <input type="text" placeholder="Name" class="input">
-                <input type="email" placeholder="Email" class="input">
-                <button class="btn-success">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 6L9 17l-5-5"/>
-                    </svg>
-                    Save
-                </button>
-                <button class="btn-secondary">
-                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6L6 18M6 6l12 12"/>
-                    </svg>
-                    Cancel
+                <input type="text" name="idLibro" placeholder="ID Libro" class="input" required>
+                <input type="text" name="idCliente" placeholder="ID Cliente" class="input" required>
+                <input type="date" name="fechaPrestamo" placeholder="Fecha de Préstamo" class="input" required>
+                <input type="date" name="fechaDevolucion" placeholder="Fecha de Devolución" class="input">
+                <button type="submit" class="btn-success">
+                    Guardar
                 </button>
             </div>
-        </div>
+        </form>
 
         <!-- Table -->
         <div class="table-container">
@@ -66,10 +58,19 @@
                     <td th:text="${prestamo.idCliente}"></td>
                     <td th:text="${prestamo.fechaPrestamo}"></td>
                     <td th:text="${prestamo.fechaDevolucion}"></td>
+                    <td>
+                        <a th:href="@{/prestamos/editar(idPrestamo=${prestamo.idPrestamo})}" class="btn-primary">Editar</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
+        <form th:action="@{/prestamos/importar}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="file" accept=".csv" class="inputdel" required>
+                <button type="submit" class="btn-primary">Importar CSV</button>
+            </div>
+        </form>
     </div>
 </div>
 </body>

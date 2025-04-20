@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Libro</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <h1>Editar Prestamo</h1>
+        </div>
+        <form th:action="@{/prestamos/editar}" th:object="${prestamo}" method="post">
+            <input type="hidden" th:field="*{idPrestamo}">
+            <div class="form-group">
+                <input type="text" th:field="*{idLibro}" placeholder="ID Libro" class="input" required>
+                <input type="text" th:field="*{idCliente}" placeholder="ID Cliente" class="input" required>
+                <input type="date" th:field="*{fechaPrestamo}" placeholder="Fecha Préstamo" class="input" required>
+                <input type="date" th:field="*{fechaDevolucion}" placeholder="Fecha Devcolución" class="input">
+                <button type="submit" class="btn-success">Actualizar</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

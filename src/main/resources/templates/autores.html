@@ -15,17 +15,16 @@
         </div>
 
         <!-- Toolbar -->
-        <div class="toolbar">
-            <div class="button-group">
-                <button class="btn-primary">
-                    Nuevo registro
-                </button>
-                <button class="btn-danger">
-                    <a> Eliminar seleccionados</a>
-                </button>
+        <form th:action="@{/autores/eliminar}" method="post">
+            <div>
+                <div class="form-group">
+                    <button class="btn-danger">
+                        <a> Eliminar por id</a>
+                    </button>
+                    <input type="text" name="idAutor" class="inputdel" placeholder="Id" required>
+                </div>
             </div>
-            <div class="selection-count">2 row(s) selected</div>
-        </div>
+        </form>
 
         <!-- Create Form -->
         <form th:action="@{/autores}" method="post">
@@ -53,10 +52,19 @@
                     <td th:text="${autor.idAutor}"></td>
                     <td th:text="${autor.nombre}"></td>
                     <td th:text="${autor.apellidos}"></td>
+                    <td>
+                        <a th:href="@{/autores/editar(idAutor=${autor.idAutor})}" class="btn-primary">Editar</a>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
+        <form th:action="@{/autores/importar}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="file" accept=".csv" class="inputdel" required>
+                <button type="submit" class="btn-primary">Importar CSV</button>
+            </div>
+        </form>
     </div>
 </div>
 </body>

@@ -34,7 +34,7 @@ public class Libros implements Serializable {
     private String editorial;
 
     @Column(name = "publicacion", nullable = false)
-    private Date publicacion;
+    private String publicacion;
 
     @Column(name = "isbn", nullable = false)
     private Long isbn;

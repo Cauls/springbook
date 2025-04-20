@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.sql.Date;
+import java.time.LocalDate;
 
 @Data
 @Entity
@@ -25,9 +26,9 @@ public class Prestamos implements Serializable {
     private Long idCliente;
 
     @Column(name = "fecha_prestamo", nullable = false)
-    private Date fechaPrestamo;
+    private String fechaPrestamo;
 
-    @Column(name = "fecha_devolucion")
-    private Date fechaDevolucion;
+    @Column(name = "fecha_devolucion", nullable = true)
+    private String fechaDevolucion;
 
 }

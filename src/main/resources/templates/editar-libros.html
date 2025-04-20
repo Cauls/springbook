@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Libro</title>
+  <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="container">
+  <div class="card">
+    <div class="header">
+      <h1>Editar Libro</h1>
+    </div>
+    <form th:action="@{/libros/editar}" th:object="${libro}" method="post">
+      <input type="hidden" th:field="*{idLibro}">
+      <div class="form-group">
+        <input type="text" th:field="*{titulo}" placeholder="Título" class="input" required>
+        <input type="text" th:field="*{autor}" placeholder="Autor" class="input" required>
+        <input type="number" th:field="*{idAutor}" placeholder="ID Autor" class="input" required>
+        <input type="text" th:field="*{editorial}" placeholder="Editorial" class="input">
+        <input type="date" th:field="*{publicacion}" placeholder="Fecha de Publicación" class="input" required>
+        <input type="number" th:field="*{isbn}" placeholder="ISBN" class="input" required>
+        <button type="submit" class="btn-success">Actualizar</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

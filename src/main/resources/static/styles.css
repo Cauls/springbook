@@ -46,6 +46,16 @@ body {
     align-items: center;
 }
 
+.toolbar input{
+    background: rgba(70, 72, 79, 0.77);
+    color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
 .button-group {
     display: flex;
     gap: 0.5rem;
@@ -63,6 +73,7 @@ body {
     align-items: center;
     padding: 1rem;
     border-bottom: 1px solid black;
+
 }
 
 .form-group input {
@@ -74,6 +85,14 @@ body {
 .input {
     display: block;
     width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.inputdel{
+    display: block;
     padding: 0.5rem 1rem;
     border: 1px solid black;
     border-radius: 0.375rem;
